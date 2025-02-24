@@ -68,13 +68,17 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start p-5 bg-[#76ABAE] rounded-xl shadow-xl">
-        <h1 className="font-medium text-4xl">Lista de Tarefas</h1>
+    <main className="flex flex-col gap-8 justify-center items-center p-5 h-svh">
+      <section>
+        <h1 className="font-medium text-4xl text-center p-5">Lista de Tarefas</h1>
         <TaskInput item={item} setItem={setItem} addItem={addItem} />
-        <TaskList items={items} toggleComplete={toggleComplete} deleteItem={deleteItem} startEdit={startEdit} />
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
-    </div>
+        <TaskList
+          items={items}
+          toggleComplete={toggleComplete}
+          deleteItem={deleteItem}
+          startEdit={startEdit}
+        />
+      </section>
+    </main>
   );
 }

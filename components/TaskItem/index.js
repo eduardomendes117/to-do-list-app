@@ -2,7 +2,7 @@ import { MdEdit, MdDeleteForever } from "react-icons/md";
 
 export default function TaskItem({ todo, toggleComplete, deleteItem, startEdit }) {
   return (
-    <li className="flex items-center gap-3 p-3 rounded-xl bg-[#EEEEEE] text-black/90 max-w-sm">
+    <li className="flex items-center gap-3 p-3 rounded-lg bg-[#EEEEEE] text-black/90 max-w-sm">
       <input
         type="checkbox"
         checked={todo.completed}
